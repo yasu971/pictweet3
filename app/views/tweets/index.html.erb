@@ -17,6 +17,9 @@
       </div>
       <p><%= tweet.text %></p>
       <span class="name">
+        <a href="">
+          <span>投稿者</span><%= tweet.user.nickname %>
+        </a>      
         <%= tweet.name %>
       </span>
     </div>
