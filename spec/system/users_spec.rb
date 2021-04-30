@@ -97,7 +97,7 @@ RSpec.describe 'ログイン', type: :system do
       # ログインボタンを押す
       find('input[name="commit"]').click
       # ログインページへ戻されることを確認する
-
+      expect(current_path).to eq(new_user_session_path)
     end
   end
 end
