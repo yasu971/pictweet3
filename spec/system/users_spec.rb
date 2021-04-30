@@ -95,9 +95,9 @@ RSpec.describe 'ログイン', type: :system do
       fill_in 'Email', with: ''
       fill_in 'Password', with: ''
       # ログインボタンを押す
-
+      find('input[name="commit"]').click
       # ログインページへ戻されることを確認する
-      
+
     end
   end
 end
