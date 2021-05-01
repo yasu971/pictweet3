@@ -9,7 +9,9 @@ RSpec.describe 'ツイート投稿', type: :system do
   context 'ツイート投稿ができるとき'do
     it 'ログインしたユーザーは新規投稿できる' do
       # ログインする
+      visit root_path
       # 新規投稿ページへのリンクがあることを確認する
+      expect(page).to have_no_content('投稿する')
       # 投稿ページに移動する
       # フォームに情報を入力する
       # 送信するとTweetモデルのカウントが1上がることを確認する
