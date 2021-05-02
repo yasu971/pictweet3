@@ -217,6 +217,7 @@ RSpec.describe 'ツイート詳細', type: :system do
     expect(page).to have_selector ".content_post[style='background-image: url(#{@tweet.image});']"
     expect(page).to have_content("#{@tweet.text}")
     # フォームが存在しないことを確認する
+    expect(page).to have_no_selector 'form'
     # 「コメントの投稿には新規登録/ログインが必要です」が表示されていることを確認する
   end
 end
